@@ -4,15 +4,23 @@
   "description": "back-end side for Multiply's landing page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon .",
+    "db:start": "docker run --rm --name spotify -e POSTGRES_PASSWORD=secret -p 5432:5432 postgres",
+    "db:migrate": "./node_modules/.bin/sequelize db:migrate"
   },
   "author": "Alina Rusu",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "nodemon": "^1.18.10",
     "pg": "^7.8.0",
-    "sequelize": "^4.42.0"
+    "sequelize": "^4.42.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0"
   }
 }

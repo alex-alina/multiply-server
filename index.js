@@ -1,8 +1,8 @@
-const express = require('express')
-const bodyParser = require('body-parser')
+const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 // const contactsRouter = require('./contacts/routes')
-// require('./db'); => why?
+require('./db');
 
 const app = express();
 const port = process.env.PORT || 4000;

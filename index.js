@@ -1,8 +1,8 @@
-const express = require('express')
-const bodyParser = require('body-parser')
+const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
-// const contactsRouter = require('./contacts/routes')
-// require('./db'); => why?
+const contacts = require('./contacts/router');
+require('./db');
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -10,5 +10,5 @@ const port = process.env.PORT || 4000;
 app
   .use(cors())
   .use(bodyParser.json())
-  // .use(contactsRouter)
+  .use(contacts)
   .listen(port);

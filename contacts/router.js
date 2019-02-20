@@ -22,7 +22,3 @@ router.post('/contacts', (req, res) => {
 });
 
 module.exports = router;
-// .then(playlist => {
-//   return res.status(201)
-//     .json({ playlist });
-// })

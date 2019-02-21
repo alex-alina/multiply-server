@@ -36,4 +36,4 @@ I want to learn:
 * More about config files (how to use them).
 
 ## License
-MIT Licence - Copyright &copy; 2018 - Alina Rusu.
+MIT Licence - Copyright &copy; 2019 - Alina Rusu.

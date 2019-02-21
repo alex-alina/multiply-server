@@ -10,7 +10,7 @@ This is the server for Multiply's landing page. The backend exposes one RESTful 
 
 ## Endpoints: 
 
-* `POST /contacts`:signup for mailing list
+* `POST /contacts`: signup for mailing list
 
 ## Description
 

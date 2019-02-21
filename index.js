@@ -9,10 +9,12 @@ require('./db');
 
 const app = express();
 const port = process.env.PORT || 4000;
+
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
+const logger = morgan('combined', { stream: accessLogStream });
 
 app
-  .use(morgan('combined', { stream: accessLogStream }))
+  .use(logger)
   .use(cors())
   .use(bodyParser.json())
   .use(contacts)
